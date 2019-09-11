@@ -74,7 +74,9 @@ end
 assign out = o_q;
 
 (* KEEP_HIERARCHY="soft" *)
-Compare10 cmp(
+Compare10 #(
+	.W(W)
+) cmp (
 	.fcn(f_q),
 	.a(a_q),
 	.b(b_q),
